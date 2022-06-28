@@ -2,8 +2,6 @@ body {
     font-family: "Space Mono", "Courier New", Courier, monospace;
     padding: 1.5em;
     margin: 0;
-    /* background-color: #141d2f; */
-    /* color:white; */
   }
 
   * {
@@ -68,6 +66,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 85%;
 }
 
 .header,
@@ -79,20 +78,30 @@ main {
 .header {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  /* width: 100%; */
+  width: 500px;
   margin-bottom: 2.25em;
 }
-
+  
 .header--title {
-  margin: 0;
+  /* margin: 0; */
+  margin-left:150px;
 }
+
+ .icon-dark{
+  margin-left: 600px;
+  margin-bottom: 10px;
+  display: flex;
+  }
 
 .user-search-bar {
     position: relative;
-    width: 100%;
+    /* width: 100%; */
+    width: 500px;
   }
   
   .user-search-bar--input {
+    /* background-color:#1e2a47 ;  */
     border: none;
     border-radius: 0.9375em;
     color: inherit;
@@ -131,13 +140,13 @@ main {
   }
   
   .user-card {
-    /* width: 350px; */
     border-radius: 0.9375em;
-    background-color:#1e2a47 ;
-    color:white;
+    color:#697c9a;
+    background-color: #fff;
     box-shadow: 0px 4px 4px 0px hsla(0, 0%, 0%, 0.251);
     margin-top: 1em;
     padding: 2em 1.5em 3em;
+    width: 500px;
   }
 
   .user-card--user {
@@ -158,9 +167,10 @@ main {
   }
 
   .user-card--stats {
+    color:black;
     display: flex;
     justify-content: space-around;
-    background-color: #141d2f;
+    background-color: #f6f8ff;
     border-radius: 0.625em;
     text-align: center;
     margin-bottom: 1.5em;
@@ -169,6 +179,7 @@ main {
   
 
   .user-stat-title {
+  color:#2b3442;
   font-size: 0.7rem;
 }
 
@@ -177,11 +188,35 @@ main {
   font-weight: bold;
 }
 
+.user-card--title{
+  color: black;
+}
+
+.user-info--username{
+  color:#0079ff;
+}
+
+
+.user-card--user-info{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width:100%;
+}
+
+.user-info--joined-date{
+  grid-area: 1/2/2/3;
+ justify-self: end;
+}
+
+.user-card--contact-text{
+color: #1e2a47;
+}
+
 .user-card--contact {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding: 0;  
 }
 
 .unavailable {
@@ -200,3 +235,33 @@ main {
   min-width: 2em;
 }
 
+
+ body.dark-theme{
+  background-color: #141d2f; 
+  color:white;
+}
+
+body.dark-theme .user-search-bar--input {
+  background-color:#1e2a47 ; 
+}
+
+body.dark-theme .user-card {
+    background-color:#1e2a47 ;
+    color:white;
+  }
+
+  body.dark-theme .user-card--stats {
+    background-color: #141d2f;
+  }
+
+  
+  body.dark-theme .user-card--contact-text, body.dark-theme .user-card--title{
+  color:white;}
+
+  body.dark-theme .user-card--stats, body.dark-theme .user-stat-title  {
+    color:white;
+  }
+ 
+  body.dark-theme .user-card--contact-icon{
+   filter: brightness(0) invert(1);
+  }

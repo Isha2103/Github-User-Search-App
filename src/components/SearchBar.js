@@ -7,7 +7,7 @@ function SearchBar() {
   const { error, clearError, fetchUserData } = useContext(userDataContext);
 
   function handleChange(e) {
-    const { name, value } = e.target;
+    const { value } = e.target;
     setInputText(value);
     clearError();
   }

@@ -25,7 +25,6 @@ function UserDataContextProvider({ children }) {
         throw Error("Failed to fetch user data.");
       }
     } catch (e) {
-      console.log(e);
       setError(e);
     } finally {
       setLoading(false);

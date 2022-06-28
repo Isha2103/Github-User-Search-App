@@ -11,7 +11,6 @@ function UserCard() {
   const { userData } = useContext(userDataContext);
   if (!userData) return;
   const date = new Date(userData.created_at);
-  console.log(date);
   const dateOptions = {
     year: "numeric",
     month: "short",
