@@ -18,35 +18,31 @@ body {
   }
 
   h1 {
-    font-size: 26px;
-    line-height: 40px;
+    font-size: 1.625rem;
+    line-height: 38px;
   }
   
-  h2{
-      font-size:20px;
-      line-height: 38px;
-  }
-
   h2 {
-    font-size: 16px;
+    font-size: 1rem; 
     line-height: 33px;
   }
   
   h3 {
-    font-size: 13px;
+    font-size: 0.8125rem; 
     line-height: 24px;
   }
   
   h4 {
-    font-size: 13px;
+    font-size: 0.8125rem;
     line-height: 20px;
     font-weight: normal;
   }
   
   p {
-    font-size: 13px;
+    font-size: 0.8125rem;
     line-height: 25px;
   }
+  
   
   button {
     border: none;
@@ -78,30 +74,34 @@ main {
 .header {
   display: flex;
   justify-content: space-between;
-  /* width: 100%; */
   width: 500px;
   margin-bottom: 2.25em;
 }
   
 .header--title {
-  /* margin: 0; */
   margin-left:150px;
+  cursor: pointer;
 }
 
  .icon-dark{
+  font-size: .8125rem;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  align-items: center;
+  cursor: pointer;
   margin-left: 600px;
   margin-bottom: 10px;
+  user-select: none;
   display: flex;
+  justify-content: space-evenly;
   }
 
 .user-search-bar {
     position: relative;
-    /* width: 100%; */
     width: 500px;
   }
   
   .user-search-bar--input {
-    /* background-color:#1e2a47 ;  */
     border: none;
     border-radius: 0.9375em;
     color: inherit;
@@ -208,17 +208,22 @@ main {
  justify-self: end;
 }
 
-.user-card--contact-text{
-color: #1e2a47;
-}
-
 .user-card--contact {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;  
 }
+@media only screen and (min-width: 700px){
+  .user-card--contact {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }}
 
+.user-card--contact-text{
+  color: #1e2a47;
+  }
+  
 .unavailable {
   opacity: 0.25;
 }
@@ -236,7 +241,7 @@ color: #1e2a47;
 }
 
 
- body.dark-theme{
+body.dark-theme{
   background-color: #141d2f; 
   color:white;
 }
@@ -265,3 +270,19 @@ body.dark-theme .user-card {
   body.dark-theme .user-card--contact-icon{
    filter: brightness(0) invert(1);
   }
+
+  span{
+    color:gray;
+    cursor: pointer;
+    margin-right: 1em;
+  }
+  
+  body.dark-theme span, body.dark-theme .icon-dark {
+    filter: brightness(0) invert(1);
+   }
+
+   body.dark-theme .toggle-icon-sun{
+    visibility: hidden;
+    display: none;
+   }
+
