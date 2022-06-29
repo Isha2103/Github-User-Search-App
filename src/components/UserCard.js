@@ -55,8 +55,8 @@ function UserCard() {
 
       <ul className="user-card--contact">
         <ListItem item={userData.location} icon={LocationIcon} />
-        <ListItem item={userData.blog} icon={WebsiteIcon} />
         <ListItem item={userData.twitter_username} icon={TwitterIcon} />
+        <ListItem item={userData.blog} icon={WebsiteIcon} />
         <ListItem item={userData.company} icon={CompanyIcon} />
       </ul>
     </div>
