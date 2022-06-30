@@ -276,6 +276,8 @@ body.dark-theme .user-card {
     cursor: pointer;
     margin-right: 1em;
   }
+
+  /* theme switcher icon styling */
   
   body.dark-theme span, body.dark-theme .icon-dark {
     filter: brightness(0) invert(1);
@@ -286,3 +288,14 @@ body.dark-theme .user-card {
     display: none;
    }
 
+   .toggle-icon-moon{
+    visibility: hidden;
+   }
+
+   .toggle-icon-sun{
+    filter: brightness(0.5) invert(1);
+   }
+
+   body.dark-theme .toggle-icon-moon{
+    visibility:visible;
+   }
