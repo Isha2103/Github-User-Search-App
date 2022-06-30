@@ -8,8 +8,6 @@ function Header(props) {
       <h1 className="header--title">devfinder</h1>
       <div className="icon-dark" onClick={themeToggle}>
         <span id="change-theme-name">DARK</span>
-        <div class="img-theme">
-        </div>
         <img class="toggle-icon-moon" src={MoonIcon} alt=""/>
         <img class="toggle-icon-sun" src={SunIcon} alt=""/>
      </div>
