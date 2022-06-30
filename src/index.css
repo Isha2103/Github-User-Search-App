@@ -294,6 +294,8 @@ body.dark-theme .user-card {
 
    .toggle-icon-sun{
     filter: brightness(0.5) invert(1);
+    position: absolute;
+    margin-left: 2em;
    }
 
    body.dark-theme .toggle-icon-moon{
