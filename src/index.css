@@ -283,21 +283,21 @@ body.dark-theme .user-card {
     filter: brightness(0) invert(1);
    }
 
-   body.dark-theme .toggle-icon-sun{
+   body.dark-theme .toggle-icon-moon{
     visibility: hidden;
     display: none;
    }
 
-   .toggle-icon-moon{
+   .toggle-icon-sun{
     visibility: hidden;
    }
 
-   .toggle-icon-sun{
+   .toggle-icon-moon{
     filter: brightness(0.5) invert(1);
     position: absolute;
     margin-left: 2em;
    }
 
-   body.dark-theme .toggle-icon-moon{
+   body.dark-theme .toggle-icon-sun{
     visibility:visible;
    }
