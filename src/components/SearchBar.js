@@ -1,16 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext }from "react";
+import { useDebouncedCallback } from "use-debounce";
 import { userDataContext } from "../contexts/userDataContext";
 import SearchIcon from "../images/icon-search.svg";
 
 function SearchBar() {
   const [inputText, setInputText] = React.useState("");
+  const debounced = useDebouncedCallback((inputText) => {
+    setInputText(inputText);
+  }, 2000);
   const { error, clearError, fetchUserData } = useContext(userDataContext);
 
-  function handleChange(e) {
+  function handleChange(e){ 
     const { value } = e.target;
     setInputText(value);
+    debounced(e.target.value)
     clearError();
-  }
+}
 
   function handleSubmit(e) {
     e.preventDefault();
