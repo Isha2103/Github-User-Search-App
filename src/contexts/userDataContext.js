@@ -1,5 +1,4 @@
 import React, { createContext } from "react";
-
 const Context = createContext();
 
 function UserDataContextProvider({ children }) {
@@ -36,7 +35,15 @@ function UserDataContextProvider({ children }) {
   }
   
   React.useEffect(() => {
+  const location = window.location.href;
+  const query = location.split('?')[1];
+  const params = new URLSearchParams(query);
+  const q = params.get("q");
+  if(q!=null){
+  fetchUserData(q);
+  }else{
     fetchUserData("octocat");
+  }
   }, []);
 
   return (
